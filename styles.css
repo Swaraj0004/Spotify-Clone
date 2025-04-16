@@ -1,13 +1,13 @@
-*{
+* {
     font-family: "Montserrat", sans-serif;
-    margin: 0 auto;
+    margin: 0;
     background-color: black;
     color: white;
     overflow: hidden;
     max-width: 2560px;
-} 
+}
 
-.main{
+.main {
     display: flex;
     max-width: 2560px;
     height: 100vh;
@@ -15,9 +15,9 @@
 }
 
 
-.nav{
+.nav {
     position: fixed;
-    top:0;
+    top: 0;
     left: 10px;
     right: 10px;
     height: 60px;
@@ -30,32 +30,32 @@
     font-size: 20px;
 }
 
-.nav-left{
+.nav-left {
     flex-basis: 40%;
     display: flex;
     gap: 10px;
 }
 
-.nav-left ul{
+.nav-left ul {
     display: flex;
-    gap:10px;
+    gap: 10px;
 }
 
-.nav-left ul i{
+.nav-left ul i {
     padding: 4px 0;
     font-size: 35px;
     text-align: center;
 }
 
-.nav-left .li-1{
+.nav-left .li-1 {
     width: 50px;
 }
 
-.nav-left .li-2{
+.nav-left .li-2 {
     width: 600px;
 }
 
-.search{
+.search {
     display: flex;
     width: 90%;
     height: 40px;
@@ -64,31 +64,32 @@
     text-align: center;
     background-color: #1f1f1f;
 }
-.search i{
+
+.search i {
     padding: 4px 0;
     width: 30px;
     background-color: #1f1f1f;
 }
 
-.search input{
+.search input {
     width: 70%;
     background-color: #1f1f1f;
     color: white;
     font-size: 18px;
 }
 
-.nav-right{
+.nav-right {
     flex-basis: 60%;
     display: flex;
     gap: 10px;
 }
 
-.nav-right-col-1 ul{
+.nav-right-col-1 ul {
     display: flex;
     gap: 10px;
 }
 
-.nav-right-col-2 ul{
+.nav-right-col-2 ul {
     display: flex;
     gap: 10px;
 }
@@ -119,7 +120,7 @@
 
 
 
-.sidebar{
+.sidebar {
     top: 60px;
     position: relative;
     height: calc(100vh - 125px);
@@ -127,7 +128,141 @@
     border-radius: 1rem;
     background-color: #1f1f1f;
 }
-.content{
+
+.sidebar .option-lib {
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+}
+
+.sidebar .option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+}
+
+.sidebar .option a {
+    color: white;
+    text-decoration: none;
+    background-color: #1f1f1f;
+}
+
+.sidebar .option i {
+    color: white;
+    background-color: #1f1f1f;
+}
+
+.sidebar .boxes {
+    padding: 0 5px;
+    width: 100%;
+    height: 230px;
+    overflow: auto;
+    scrollbar-color: black black;
+    scrollbar-width: thin;
+    background-color: #1f1f1f;
+}
+
+.sidebar .lib-boxes {
+    margin: 12px 0;
+    padding: 16px 20px;
+    border-radius: 0.7rem;
+    background-color: #2a2a2a;
+}
+
+.lib-boxes div {
+    background-color: #2a2a2a;
+}
+
+.sidebar .lib-boxes .box-1 {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #2a2a2a;
+}
+
+.sidebar .lib-boxes .box-2 {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+    background-color: #2a2a2a;
+}
+
+.sidebar .lib-boxes .badge {
+    background-color: white;
+    font-weight: 700;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    padding: 4px 16px;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.legal p{
+    background-color: #1f1f1f;
+    font-size: 0.8rem;
+    color: white;
+    opacity: 0.75;
+    padding: 10px;
+    cursor: pointer;
+}
+    
+.legal{
+    padding: 0 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1f1f1f;
+}
+
+.cookie{
+    background-color: #1f1f1f;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 700;
+    opacity: 0.95;
+    padding: 10px;
+}
+
+.cookie p{
+    padding: 0 20px;
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.cookie p:hover{
+    color: white;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.cookie button{
+    background-color: #1f1f1f;
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 100px;
+    padding: 4px 16px;
+    margin-top: 2rem;
+    margin-left: 20px;
+}
+
+.cookie button:hover{
+    border: 1px solid white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.content {
     top: 60px;
     position: relative;
     height: calc(100vh - 125px);
@@ -135,15 +270,173 @@
     border-radius: 1rem;
     flex: 1;
     overflow: auto;
-    scrollbar-color: white black;
-    scrollbar-width: thick;
+    scrollbar-color: black black;
+    scrollbar-width: thin;
+    padding: 0 20px;
 }
-.player{
+
+.content div {
+    background-color: #1f1f1f;
+}
+
+.content h2 {
+    background-color: #1f1f1f;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-container .card {
+    background-color: #2a2a2a;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.content p {
+    margin: 5px 0;
+    background-color: #2a2a2a;
+}
+
+.card-text {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.foter {
+    width: 100%;
+}
+
+.foter p {
+    background-color: #1f1f1f;
+}
+
+.foter-2 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.foter-1 {
+    width: 150px;
+}
+
+.icon {
+    min-width: 100px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.icon i {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    background-color: #2a2a2a;
+}
+
+.icon i:hover {
+    background-color: #393939;
+    opacity: 0.9;
+}
+
+.main-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+.foter-1 p {
+    font-size: 0.8rem;
+    color: white;
+    opacity: 0.75;
+}
+
+.foter-1 p:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.line {
+    margin: 40px auto;
+    width: 90%;
+    opacity: 0.1;
+    border: 1px solid white;
+}
+
+.foter-3 {
+    margin-bottom: 70px;
+}
+
+.foter-3 p {
+    padding: 0 20px;
+    font-size: 0.8rem;
+    color: white;
+    opacity: 0.75;
+}
+
+.player {
     position: fixed;
     left: 15px;
     right: 15px;
     bottom: 5px;
     height: 60px;
-    background: linear-gradient(90deg,#af2896,#509bf5);
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    cursor: pointer;
 }
 
+.player div {
+    background-color: transparent;
+}
+
+.sub div p {
+    background-color: transparent;
+}
+
+.sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.sub-text-1 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sub-text-2 {
+    font-size: 0.8rem;
+    color: white;
+}
